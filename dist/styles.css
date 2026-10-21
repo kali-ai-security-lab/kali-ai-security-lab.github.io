@@ -40,3 +40,279 @@ body{background:#fff;color:var(--ink)}
 .button.primary{background:var(--amber);color:#082c50;box-shadow:0 12px 30px rgba(216,167,46,.22)}
 footer{background:#082c50;color:rgba(255,255,255,.62)}footer a{color:#f3c861}
 @media(max-width:900px){.nav{background:#0b3158;color:#fff}.nav-cta{border-color:rgba(255,255,255,.45);background:transparent}.menu-toggle{color:var(--ink)}}
+
+/* Cosmic KALI palette — sampled from the two user-selected references. */
+:root{
+  --ink:#010c1c;
+  --cream:#071b36;
+  --paper:#030d20;
+  --mint:#54c6cd;
+  --aqua:#54c6cd;
+  --amber:#f0bd5b;
+  --violet:#ae68c7;
+  --magenta:#df4faf;
+  --royal:#133165;
+  --ivory:#fcf5dd;
+  --muted:#b4c4d9;
+  --line:rgba(252,245,221,.14)
+}
+body{
+  background:
+    radial-gradient(circle at 18% 16%,rgba(19,49,101,.34),transparent 30rem),
+    var(--paper);
+  color:var(--ivory)
+}
+::selection{background:var(--amber);color:var(--ink)}
+:focus-visible{outline:2px solid var(--mint);outline-offset:4px}
+.skip-link{background:var(--amber);color:var(--ink)}
+
+.site-header{color:var(--ivory);text-shadow:0 1px 18px rgba(1,12,28,.6)}
+.site-header.scrolled{
+  background:rgba(1,12,28,.9);
+  border-bottom-color:rgba(240,189,91,.22);
+  box-shadow:0 12px 42px rgba(0,0,0,.25)
+}
+.brand-mark{
+  color:var(--amber);
+  border-color:rgba(240,189,91,.8);
+  background:#fff;
+  box-shadow:0 0 28px rgba(240,189,91,.18)
+}
+.brand-mark{overflow:hidden}
+.brand-mark img{width:100%;height:100%;max-width:none;object-fit:cover;transform:scale(1.72) translateY(10%)}
+.brand em,.nav a:hover{color:var(--mint)}
+.nav-cta{border-color:rgba(240,189,91,.58);background:rgba(1,12,28,.34)}
+.menu-toggle{color:var(--ivory)}
+
+.hero{
+  min-height:850px;
+  background-color:var(--ink);
+  background-image:
+    linear-gradient(90deg,rgba(1,12,28,.98) 0%,rgba(1,12,28,.9) 28%,rgba(1,12,28,.58) 53%,rgba(1,12,28,.08) 82%),
+    linear-gradient(0deg,rgba(1,12,28,.9) 0%,transparent 28%),
+    url('assets/kali-cosmic-agent-hero.jpg');
+  background-size:cover;
+  background-position:center;
+  color:var(--ivory);
+  isolation:isolate
+}
+.hero:before{
+  z-index:0;
+  background:
+    radial-gradient(circle at 82% 32%,rgba(84,198,205,.13),transparent 24%),
+    radial-gradient(circle at 64% 66%,rgba(174,104,199,.14),transparent 26%)
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  opacity:.18;
+  pointer-events:none;
+  background-image:radial-gradient(circle,rgba(252,245,221,.9) 0 1px,transparent 1.25px);
+  background-size:78px 78px;
+  mask-image:linear-gradient(90deg,#000,transparent 54%)
+}
+.hero> :not(.hero-orbit){position:relative;z-index:2}
+.hero-orbit{display:none}
+.eyebrow{color:var(--amber)}
+.hero-expansion{color:rgba(84,198,205,.84)}
+.hero h1{
+  max-width:min(72vw,1050px);
+  color:var(--ivory);
+  text-shadow:0 3px 32px rgba(1,12,28,.62)
+}
+.hero h1 span{color:var(--amber);text-shadow:0 0 35px rgba(240,189,91,.2)}
+.hero-bottom{
+  margin-left:0;
+  grid-template-columns:minmax(280px,570px) auto;
+  max-width:880px
+}
+.hero-bottom p{color:rgba(252,245,221,.76);text-shadow:0 2px 18px var(--ink)}
+.text-link{color:var(--mint);border-bottom-color:var(--mint)}
+.signal-row{border-top-color:rgba(240,189,91,.32);max-width:900px}
+.signal-row span{
+  color:rgba(252,245,221,.83);
+  border-color:rgba(84,198,205,.34);
+  background:rgba(1,12,28,.5);
+  backdrop-filter:blur(8px)
+}
+.hero-visual-caption{
+  position:absolute!important;
+  right:var(--pad);
+  bottom:7.7rem;
+  border-left:1px solid var(--amber);
+  padding:.7rem 0 .7rem 1rem;
+  text-align:left;
+  text-shadow:0 2px 18px var(--ink)
+}
+.hero-visual-caption span{font-size:.59rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mint)}
+.hero-visual-caption p{margin:.25rem 0 0;font:400 1.05rem/1.25 Georgia,serif;color:var(--ivory)}
+.hero-visual-caption em{color:var(--amber);font-weight:400}
+
+.section-label{color:rgba(180,196,217,.6)}
+.section-label.light{color:rgba(180,196,217,.64)}
+.intro-copy h2,.section-heading h2{color:var(--ivory)}
+.intro-copy h2 em,.contact h2 em{color:var(--mint)}
+.intro-copy>p,.body-copy{color:var(--muted)}
+.profile-card{
+  background:linear-gradient(155deg,rgba(19,49,101,.95),rgba(7,27,54,.96));
+  border-top-color:var(--amber);
+  color:var(--ivory);
+  box-shadow:0 26px 70px rgba(0,0,0,.3),0 0 0 1px rgba(240,189,91,.1)
+}
+.profile-card img{filter:saturate(.88) contrast(1.05)}
+.profile-card p{color:var(--muted)}
+.profile-links a{color:var(--mint)}
+.kali-identity{
+  grid-column:2 / -1;
+  display:grid;
+  grid-template-columns:minmax(230px,330px) 1fr;
+  gap:clamp(2rem,5vw,5rem);
+  align-items:center;
+  margin-top:1rem;
+  padding:clamp(1rem,2vw,1.6rem);
+  background:
+    radial-gradient(circle at 80% 18%,rgba(240,189,91,.14),transparent 16rem),
+    linear-gradient(135deg,rgba(19,49,101,.9),rgba(7,27,54,.96));
+  border:1px solid rgba(240,189,91,.25);
+  box-shadow:0 28px 75px rgba(0,0,0,.28)
+}
+.kali-emblem-wrap{background:#fff;padding:.6rem;box-shadow:0 0 45px rgba(240,189,91,.12)}
+.kali-emblem-wrap img{width:100%;height:auto}
+.kali-identity-copy{padding:1rem clamp(.2rem,2vw,1.5rem) 1rem 0}
+.kali-identity-copy .overline{color:var(--mint);margin:0 0 1rem}
+.kali-identity-copy h3{font:400 clamp(2.2rem,4.3vw,4.8rem)/.95 Georgia,serif;letter-spacing:-.04em;margin:0 0 1.3rem;color:var(--ivory)}
+.kali-identity-copy h3 em{color:var(--amber);font-weight:400}
+.kali-identity-copy>p:last-of-type{max-width:580px;color:var(--muted);font-size:1rem}
+.identity-signals{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem}
+.identity-signals span{font-size:.59rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ivory);border:1px solid rgba(84,198,205,.34);border-radius:99px;padding:.45rem .72rem}
+
+.research{
+  background:
+    radial-gradient(circle at 88% 10%,rgba(84,198,205,.15),transparent 24rem),
+    radial-gradient(circle at 8% 48%,rgba(174,104,199,.13),transparent 28rem),
+    linear-gradient(152deg,#010817 0%,#071b36 62%,#0d2854 100%);
+  border-top:1px solid rgba(240,189,91,.18);
+  border-bottom:1px solid rgba(84,198,205,.16)
+}
+.research .section-heading .overline,.section-heading .overline{color:var(--amber)}
+.research-visual{
+  margin:4rem 0 0;
+  position:relative;
+  min-height:340px;
+  height:min(43vw,530px);
+  overflow:hidden;
+  border:1px solid rgba(240,189,91,.34);
+  box-shadow:0 32px 90px rgba(0,0,0,.4),0 0 70px rgba(84,198,205,.08)
+}
+.research-visual:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,transparent 48%,rgba(1,12,28,.9) 100%)
+}
+.research-visual img{width:100%;height:100%;object-fit:cover}
+.research-visual figcaption{
+  position:absolute;
+  left:clamp(1.2rem,3vw,2.7rem);
+  bottom:clamp(1.25rem,3vw,2.5rem);
+  z-index:2;
+  display:grid;
+  gap:.35rem
+}
+.research-visual figcaption span{color:var(--mint);font-size:.63rem;letter-spacing:.17em;text-transform:uppercase;font-weight:700}
+.research-visual figcaption strong{font:400 clamp(1.4rem,2.5vw,2.6rem)/1.05 Georgia,serif;color:var(--ivory)}
+.trajectory-key{
+  position:absolute;
+  right:clamp(1.2rem,3vw,2.7rem);
+  bottom:clamp(1.25rem,3vw,2.5rem);
+  z-index:2;
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+  justify-content:flex-end
+}
+.trajectory-key span{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.42rem .7rem;border-radius:99px;border:1px solid rgba(252,245,221,.24);background:rgba(1,12,28,.62);backdrop-filter:blur(8px)}
+.trajectory-key span:first-child{color:#f181cf;border-color:rgba(223,79,175,.55)}
+.trajectory-key span:nth-child(2){color:var(--amber);border-color:rgba(240,189,91,.55)}
+.trajectory-key span:last-child{color:var(--mint);border-color:rgba(84,198,205,.55)}
+.research-grid{border-top-color:rgba(240,189,91,.2);margin-top:4.5rem}
+.research-card{border-right-color:rgba(252,245,221,.14)}
+.card-number{color:var(--amber)}
+.research-card p{color:var(--muted)}
+.research-card ul{border-top-color:rgba(252,245,221,.14)}
+.research-card li{border-color:rgba(84,198,205,.26);background:rgba(19,49,101,.28)}
+.glyph-language i,.glyph-security i:first-child{border-color:var(--mint)}
+.glyph-language i:nth-child(2){border-color:var(--violet)}
+.glyph-security i:last-child,.glyph-quantum i:nth-child(3){background:var(--amber)}
+
+.publications{background:transparent}
+.pub-list{border-top-color:var(--line)}
+.pub-item{border-bottom-color:var(--line)}
+.pub-item:hover{background:rgba(19,49,101,.42)}
+.pub-year,.pub-item small{color:var(--muted)}
+.pub-item strong{color:var(--ivory)}
+.pub-arrow{color:var(--amber)}
+.button.secondary{border-color:rgba(240,189,91,.7);color:var(--amber)}
+.button.secondary:hover{background:var(--amber);color:var(--ink)}
+
+.people{
+  background:
+    radial-gradient(circle at 80% 30%,rgba(174,104,199,.12),transparent 24rem),
+    linear-gradient(130deg,#071b36,#0b2348)
+}
+.people-panel{border-top-color:var(--amber)}
+.mini-profile,.join-note{border-color:var(--line)}
+.mini-profile p{color:var(--mint)}
+.mini-profile span,.join-note p{color:var(--muted)}
+.join-icon{border-color:var(--amber);color:var(--amber);box-shadow:0 0 30px rgba(240,189,91,.12)}
+
+.contact{
+  color:var(--ivory);
+  background:
+    radial-gradient(circle at 78% 44%,rgba(84,198,205,.18),transparent 22rem),
+    radial-gradient(circle at 20% 70%,rgba(174,104,199,.16),transparent 24rem),
+    linear-gradient(125deg,#010817,#071b36 60%,#133165)
+}
+.contact .section-label.light{color:rgba(180,196,217,.6)}
+.contact .overline{color:var(--amber)}
+.contact h2{color:var(--ivory)}
+.contact h2 em{color:var(--mint)}
+.contact-row{border-top-color:rgba(240,189,91,.24)}
+.contact-row p{color:var(--muted)}
+.button.primary{background:var(--amber);color:var(--ink);box-shadow:0 14px 42px rgba(240,189,91,.18)}
+.button.primary:hover{background:var(--ivory)}
+footer{background:#010817;color:rgba(180,196,217,.62);border-top-color:rgba(240,189,91,.16)}
+footer a{color:var(--amber)}
+
+@media(max-width:900px){
+  .nav{background:rgba(1,12,28,.98);color:var(--ivory)}
+  .nav-cta{border-color:rgba(240,189,91,.5);background:transparent}
+  .menu-toggle{color:var(--ivory)}
+  .hero{background-position:58% center}
+  .hero h1{max-width:100%}
+  .hero-bottom{grid-template-columns:1fr;max-width:610px}
+  .hero-visual-caption{display:none}
+  .kali-identity{grid-column:1;grid-template-columns:minmax(190px,280px) 1fr}
+  .trajectory-key{display:none}
+  .research-visual{height:52vw;min-height:310px}
+}
+@media(max-width:520px){
+  .hero{
+    min-height:800px;
+    background-image:
+      linear-gradient(90deg,rgba(1,12,28,.96),rgba(1,12,28,.64)),
+      linear-gradient(0deg,rgba(1,12,28,.94),transparent 38%),
+      url('assets/kali-cosmic-agent-hero.jpg');
+    background-position:62% center
+  }
+  .hero h1{font-size:3.25rem}
+  .kali-identity{grid-template-columns:1fr;gap:1.2rem}
+  .kali-emblem-wrap{max-width:310px;margin:auto}
+  .kali-identity-copy{padding:1rem .35rem}
+  .research-visual{height:410px;min-height:0}
+  .research-visual img{object-position:56% center}
+  .research-visual figcaption strong{font-size:1.35rem;max-width:280px}
+}
