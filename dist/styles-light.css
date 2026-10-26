@@ -129,6 +129,8 @@ img { display: block; max-width: 100%; }
 .mini-profile p { margin: 0 0 .25rem; color: var(--gold); font-size: .67rem; font-weight: 750; text-transform: uppercase; }
 .mini-profile h3, .join-note h3 { margin: 0; color: var(--violet-dark); font: 400 1.3rem/1.2 Georgia,serif; }
 .mini-profile span, .join-note p { color: var(--muted); font-size: .79rem; }
+.collaborator-profile { padding-top: 1.4rem; padding-bottom: 0; border-bottom: 0; }
+.collaborator-profile .profile-links { margin-top: .6rem; gap: .85rem; }
 .join-note { display: flex; align-items: flex-start; gap: 1rem; padding-top: 1.4rem; }
 .join-note p { margin: .4rem 0 0; }
 .join-icon { display: grid; flex: 0 0 35px; place-items: center; width: 35px; height: 35px; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); font-size: 1.25rem; line-height: 1; }
